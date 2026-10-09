@@ -1,1 +1,2 @@
-# Continum uses only Python standard-library modules; no pip dependencies are needed.
+psycopg2-binary
+python-dotenv 
