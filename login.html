@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Entrar — Continum</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="auth.js" defer></script>
+</head>
+<body>
+  <main class="auth-shell">
+    <a class="brand" href="index.html">Conti<b>num</b></a>
+    <section class="auth-card" aria-labelledby="page-title">
+      <p class="eyebrow">SUA BIBLIOTECA, DO SEU JEITO</p>
+      <h1 id="page-title">Crie sua conta</h1>
+      <p class="intro">Entre para guardar seus livros e continuar de onde parou.</p>
+
+      <div id="account-panel" hidden>
+        <p id="account-message" class="notice" role="status"></p>
+        <button id="logout-button" class="primary" type="button">Sair da conta</button>
+      </div>
+
+      <div id="forms-panel">
+        <div class="switcher" aria-label="Acesso à conta">
+          <button id="signup-tab" class="switch active" type="button" aria-pressed="true">Criar conta</button>
+          <button id="login-tab" class="switch" type="button" aria-pressed="false">Entrar</button>
+        </div>
+
+        <form id="signup-form">
+          <label for="signup-email">E-mail</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+
+          <label for="signup-username">Nome de usuário</label>
+          <input id="signup-username" name="username" type="text" autocomplete="username" minlength="3" maxlength="30" pattern="[A-Za-z0-9_.\x2d]{3,30}" aria-describedby="username-hint" required>
+          <small id="username-hint">Use de 3 a 30 letras, números, ponto, hífen ou sublinhado.</small>
+
+          <label for="signup-password">Senha</label>
+          <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+          <small>Use pelo menos 8 caracteres.</small>
+
+          <button class="primary" type="submit">Criar minha conta</button>
+        </form>
+
+        <form id="login-form" hidden>
+          <label for="login-identifier">E-mail ou nome de usuário</label>
+          <input id="login-identifier" name="identifier" type="text" autocomplete="username" maxlength="254" required>
+
+          <label for="login-password">Senha</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" maxlength="128" required>
+
+          <button class="primary" type="submit">Entrar</button>
+        </form>
+
+        <p id="form-message" class="notice" role="alert" aria-live="polite"></p>
+      </div>
+
+      <a class="back-link" href="index.html">← Voltar para a biblioteca</a>
+    </section>
+    <p class="footer-note">Seus dados de acesso são armazenados com segurança neste site.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1 @@
+# Continum uses only Python standard-library modules; no pip dependencies are needed.

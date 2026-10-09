@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Continum — biblioteca digital</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="app">
+<header><div class="logo">Conti<b>num</b></div><button class="prof" aria-label="Perfil"></button></header>
+<main class="stage" id="stage" aria-label="Continum: biblioteca 3D com 4 andares"></main>
+<aside class="side">
+<h1>Uma biblioteca que se move com quem lê.</h1>
+<p>Cada lombada é um livro real da plataforma. Quanto mais leituras, mais ele sobe.</p>
+<label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Título, autor, gênero, tag ou coleção" aria-label="Pesquisar livros"></label>
+<div class="row"><button class="btn p" id="bAdd">+ Adicionar livro</button><button class="btn" id="bFav">★ Favoritos</button><button class="btn" id="bRec">✦ Recomendações</button></div>
+<p id="dbStatus" class="db-status" role="status" aria-live="polite"></p>
+<div class="res" id="res" aria-live="polite"></div>
+</aside></div>
+<div class="tip" id="tip"></div>
+<div class="ov" id="ovD"></div><div class="ov" id="ovA"></div>
+<div class="rd" id="rd"><div class="bar"><button class="btn" id="rBack">← Voltar</button><button class="btn" id="rP">‹</button><span id="rInfo">–</span><button class="btn" id="rN">›</button><button class="btn" id="rZo">−</button><button class="btn" id="rZi">+</button><button class="btn" id="rFs">⛶</button><b id="rT" style="margin-left:auto;font-size:13px"></b></div><div class="pg" id="rPg"></div></div>
+<script src="app.js"></script><script src="continum-profile.js" defer></script></body></html>
